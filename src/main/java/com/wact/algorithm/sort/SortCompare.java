@@ -13,7 +13,7 @@ public class SortCompare {
         if (sorter != null) {
             sorter.sort(a);
             assert SortUtils.isSorted(a);
-            SortUtils.show(a);
+            //SortUtils.show(a);
         }
         return timer.elapsedTime();
     }
@@ -39,7 +39,7 @@ public class SortCompare {
     }
 
     public static void main(String[] args) {
-        int n = 10;
+        int n = 100000;
         String alg = "insertion";
         double time = timeRandomInput(alg, n);
         StdOut.printf("Alg: %s, Time: %f", alg, time);

@@ -4,14 +4,6 @@ import com.wact.algorithm.utils.SortUtils;
 
 public class Selection implements Sorter {
 
-    public static void main(String[] args) {
-        Selection selection = new Selection();
-        Character[] a = new Character[]{'e', 'x', 'a', 'm', 'p', 'l', 'e'};
-        selection.sort(a);
-        assert SortUtils.isSorted(a);
-        SortUtils.show(a);
-    }
-
     @Override
     public <T extends Comparable<T>> void sort(T[] a) {
         int n = a.length;
