@@ -33,6 +33,8 @@ public class SortCompare {
                 return new Selection();
             case "insertion":
                 return new Insertion();
+            case "shell":
+                return new Shell();
             default:
                 return null;
         }
@@ -40,7 +42,7 @@ public class SortCompare {
 
     public static void main(String[] args) {
         int n = 100000;
-        String alg = "insertion";
+        String alg = "shell";
         double time = timeRandomInput(alg, n);
         StdOut.printf("Alg: %s, Time: %f", alg, time);
     }
