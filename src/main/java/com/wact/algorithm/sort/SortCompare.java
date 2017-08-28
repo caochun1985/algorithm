@@ -12,7 +12,7 @@ public class SortCompare {
         Sorter sorter = create(alg);
         if (sorter != null) {
             sorter.sort(a);
-            assert SortUtils.isSorted(a);
+            StdOut.println(SortUtils.isSorted(a));
             //SortUtils.show(a);
         }
         return timer.elapsedTime();
@@ -35,14 +35,16 @@ public class SortCompare {
                 return new Insertion();
             case "shell":
                 return new Shell();
+            case "merge":
+                return new Merge();
             default:
                 return null;
         }
     }
 
     public static void main(String[] args) {
-        int n = 100000;
-        String alg = "shell";
+        int n = 100;
+        String alg = "merge";
         double time = timeRandomInput(alg, n);
         StdOut.printf("Alg: %s, Time: %f", alg, time);
     }
