@@ -38,7 +38,9 @@ public class SortCompare {
             case "merge":
                 return new Merge();
             case "quick":
-                return new Merge();
+                return new Quick();
+            case "quick3way":
+                return new Quick3way();
             default:
                 return null;
         }
@@ -46,7 +48,7 @@ public class SortCompare {
 
     public static void main(String[] args) {
         int n = 1000000;
-        String alg = "quick";
+        String alg = "quick3way";
         double time = timeRandomInput(alg, n);
         StdOut.printf("Alg: %s, Time: %f", alg, time);
     }
