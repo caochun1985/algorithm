@@ -37,14 +37,16 @@ public class SortCompare {
                 return new Shell();
             case "merge":
                 return new Merge();
+            case "quick":
+                return new Merge();
             default:
                 return null;
         }
     }
 
     public static void main(String[] args) {
-        int n = 100;
-        String alg = "merge";
+        int n = 1000000;
+        String alg = "quick";
         double time = timeRandomInput(alg, n);
         StdOut.printf("Alg: %s, Time: %f", alg, time);
     }
